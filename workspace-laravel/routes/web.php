@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 // Route::get('{any}', function () {
 //     return view('index');
@@ -24,6 +24,12 @@ Route::get('/', function () {
 Route::fallback(function () {
     return view('index');
 });
+
+Route::get('/home', function () {
+    return view('welcome');
+});
+
+
 
 // Route::prefix('/')->group(function () {
 //     return view('index');

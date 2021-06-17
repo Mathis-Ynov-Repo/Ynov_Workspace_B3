@@ -11,7 +11,8 @@
     "serve:back": "yarn workspace back serve",
     "serve:front": "yarn workspace front serve",
     "serve": "run-p -l serve:*",
-    "build": "yarn workspace front build && cp -r workspace-vue/dist/css workspace-laravel/public && cp -r workspace-vue/dist/img workspace-laravel/public && cp -r workspace-vue/dist/js workspace-laravel/public"
+    "build": "yarn workspace front build",
+    "buildOld": "yarn workspace front build && cp -r workspace-vue/dist/css workspace-laravel/public && cp -r workspace-vue/dist/img workspace-laravel/public && cp -r workspace-vue/dist/js workspace-laravel/public"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"

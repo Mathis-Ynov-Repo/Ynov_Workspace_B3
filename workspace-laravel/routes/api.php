@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/test', function () {
+    return ['Hellow World'];
+});
+
+Route::get('/ghibli', function () {
+    return ['score' => 99, 'movie' => 'Totoro'];
+});

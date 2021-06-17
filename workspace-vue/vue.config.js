@@ -1,12 +1,15 @@
 const path = require("path")
 
 module.exports = {
-    outputDir: path.resolve(__dirname,"../workspace-laravel/public/dist"),
-    publicPath: process.env.NODE_ENV === 'production'
-        ? '/dist'
-        : '/',
+    outputDir: path.resolve(__dirname,"../workspace-laravel/public"),
+    assetsDir: "./dist",
     indexPath: path.resolve(__dirname,"../workspace-laravel/resources/views/index.html"),
     devServer: {
-        proxy: 'http://localhost:8000'
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8000',
+                changeOrigin: true
+            }
+        }
     }
 }

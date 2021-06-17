@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "name": "back",
+    "version": "1.0.0",
+    "scripts": {
+        "serve": "php artisan serve",
+        "migrate": "php artisan migrate",
+        "seed": "php artisan db:seed"
+    }
+}
